@@ -438,7 +438,7 @@ instance_groups:
               #zap scan client - just enough permissions to use the zap-scan-user to login and create a token via "uaac context"
               zap_scan_client:
                 override: true
-                authorized-grant-types: password,refresh_token
+                authorized-grant-types: client_credentials,password,refresh_token
                 authorities: uaa.user
                 scope: uaa.user
                 secret: ((zap_scan_client_secret))
