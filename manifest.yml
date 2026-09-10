@@ -439,7 +439,7 @@ instance_groups:
               zap_scan_client:
                 override: true
                 authorized-grant-types: client_credentials,password,refresh_token
-                authorities: uaa.user
+                authorities: uaa.user,openid
                 scope: uaa.user,openid
                 secret: ((zap_scan_client_secret))
 
