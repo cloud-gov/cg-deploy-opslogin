@@ -440,7 +440,7 @@ instance_groups:
                 override: true
                 authorized-grant-types: client_credentials,password,refresh_token
                 authorities: uaa.user
-                scope: uaa.user
+                scope: uaa.user,openid
                 secret: ((zap_scan_client_secret))
 
               # Defect Dojo auth
