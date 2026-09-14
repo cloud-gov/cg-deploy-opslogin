@@ -438,8 +438,7 @@ instance_groups:
               #zap scan client - just enough permissions to use the zap-scan-user to login and create a token via "uaac context"
               zap_scan_client:
                 override: true
-                authorized-grant-types: authorization_code,client_credentials,password,refresh_token
-                redirect-uri: https://opslogin.fr.cloud.gov/oauth/callback
+                authorized-grant-types: client_credentials,password,refresh_token
                 authorities: uaa.user,uaa.resource,openid
                 scope: uaa.user,uaa.resource,openid
                 secret: ((zap_scan_client_secret))
